@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DJICameraViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *StatusBar;
+@property (weak, nonatomic) IBOutlet UILabel *VideoStatusBar;
 
 @end
