@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3573F704D3455425A4D502B3 /* libPods-FPVDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3746ABCB1EB291DED112D5CE /* libPods-FPVDemo.a */; };
+		690AA4E01E4C6E800097ABE4 /* keyboard_mouse_event.c in Sources */ = {isa = PBXBuildFile; fileRef = 690AA4DF1E4C6E800097ABE4 /* keyboard_mouse_event.c */; };
 		6930D2321DEC450000BD7F5F /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A412559C1DCB110B002DF91B /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69B2F0051DED916900A5508F /* DJIHUDMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B2F0041DED916900A5508F /* DJIHUDMapView.swift */; };
 		69E505B11E0ED6FC0091BF62 /* airplane-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 69E505B01E0ED6FC0091BF62 /* airplane-icon.png */; };
@@ -55,6 +56,9 @@
 /* Begin PBXFileReference section */
 		3746ABCB1EB291DED112D5CE /* libPods-FPVDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FPVDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F94338B8D4B8DE8E56A2A51 /* Pods-FPVDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPVDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FPVDemo/Pods-FPVDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		690AA4DD1E4C6D6B0097ABE4 /* keyboard_mouse_event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keyboard_mouse_event.h; sourceTree = "<group>"; };
+		690AA4DF1E4C6E800097ABE4 /* keyboard_mouse_event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keyboard_mouse_event.c; sourceTree = "<group>"; };
+		6941DD111E4C55FB00B924A1 /* key_input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = key_input.h; sourceTree = "<group>"; };
 		69B2F0011DED8DCA00A5508F /* FPVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		69B2F0041DED916900A5508F /* DJIHUDMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIHUDMapView.swift; sourceTree = "<group>"; };
 		69E505B01E0ED6FC0091BF62 /* airplane-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplane-icon.png"; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		A4F5011F1B452220003A82BF /* FPVDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPVDemoTests.m; sourceTree = "<group>"; };
 		A4F5019B1B454E54003A82BF /* DJICameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJICameraViewController.h; sourceTree = "<group>"; };
 		A4F5019C1B454E54003A82BF /* DJICameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJICameraViewController.m; sourceTree = "<group>"; };
+		C254D0B31E0FA6C500157BCF /* KeyBoard-PC.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "KeyBoard-PC.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A4F501161B452220003A82BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C254D0B01E0FA6C500157BCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,6 +132,7 @@
 			children = (
 				A4F501001B452220003A82BF /* FPVDemo.app */,
 				A4F501191B452220003A82BF /* FPVDemoTests.xctest */,
+				C254D0B31E0FA6C500157BCF /* KeyBoard-PC.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +151,9 @@
 				A4F501031B452220003A82BF /* Supporting Files */,
 				69B2F0011DED8DCA00A5508F /* FPVDemo-Bridging-Header.h */,
 				69B2F0041DED916900A5508F /* DJIHUDMapView.swift */,
+				6941DD111E4C55FB00B924A1 /* key_input.h */,
+				690AA4DD1E4C6D6B0097ABE4 /* keyboard_mouse_event.h */,
+				690AA4DF1E4C6E800097ABE4 /* keyboard_mouse_event.c */,
 			);
 			path = FPVDemo;
 			sourceTree = "<group>";
@@ -230,6 +246,23 @@
 			productReference = A4F501191B452220003A82BF /* FPVDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C254D0B21E0FA6C500157BCF /* KeyBoard-PC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C254D0BC1E0FA6C500157BCF /* Build configuration list for PBXNativeTarget "KeyBoard-PC" */;
+			buildPhases = (
+				C254D0AF1E0FA6C500157BCF /* Sources */,
+				C254D0B01E0FA6C500157BCF /* Frameworks */,
+				C254D0B11E0FA6C500157BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KeyBoard-PC";
+			productName = "KeyBoard-PC";
+			productReference = C254D0B31E0FA6C500157BCF /* KeyBoard-PC.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +287,11 @@
 						DevelopmentTeam = 7UL3LRJL93;
 						TestTargetID = A4F500FF1B452220003A82BF;
 					};
+					C254D0B21E0FA6C500157BCF = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = S3575FJNHR;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A4F500FB1B452220003A82BF /* Build configuration list for PBXProject "FPVDemo" */;
@@ -277,6 +315,7 @@
 			targets = (
 				A4F500FF1B452220003A82BF /* FPVDemo */,
 				A4F501181B452220003A82BF /* FPVDemoTests */,
+				C254D0B21E0FA6C500157BCF /* KeyBoard-PC */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +344,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A4F501171B452220003A82BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C254D0B11E0FA6C500157BCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,6 +416,7 @@
 				A4F501061B452220003A82BF /* main.m in Sources */,
 				A4F5019D1B454E54003A82BF /* DJICameraViewController.m in Sources */,
 				69B2F0051DED916900A5508F /* DJIHUDMapView.swift in Sources */,
+				690AA4E01E4C6E800097ABE4 /* keyboard_mouse_event.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +425,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F501201B452220003A82BF /* FPVDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C254D0AF1E0FA6C500157BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -485,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -590,6 +644,42 @@
 			};
 			name = Release;
 		};
+		C254D0BD1E0FA6C500157BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S3575FJNHR;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "KeyBoard-PC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hkust.fwhud.KeyBoard-PC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C254D0BE1E0FA6C500157BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = S3575FJNHR;
+				INFOPLIST_FILE = "KeyBoard-PC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hkust.fwhud.KeyBoard-PC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,6 +706,15 @@
 			buildConfigurations = (
 				A4F501271B452220003A82BF /* Debug */,
 				A4F501281B452220003A82BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C254D0BC1E0FA6C500157BCF /* Build configuration list for PBXNativeTarget "KeyBoard-PC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C254D0BD1E0FA6C500157BCF /* Debug */,
+				C254D0BE1E0FA6C500157BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
