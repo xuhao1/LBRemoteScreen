@@ -1,9 +1,8 @@
-# iOS-FPVDemo
+# LBRemoteScreen
 
 ## Introduction
 
-This FPVDemo is design for you to gain a basic understanding of the DJI Mobile SDK. It will implement the FPV view and two basic camera functionalities: **Take Photo** and **Record Video**.
-
+This program should be used with [Onboard SDK My fork](https://github.com/xuhao1/Onboard-SDK), running the program https://github.com/xuhao1/Onboard-SDK in Onboard-SDK/sample/Linux/Non-Blocking
 ## Requirements
 
  - iOS 9.0+
